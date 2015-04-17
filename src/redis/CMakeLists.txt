@@ -1,0 +1,36 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+SET(REDIS_LIBNAME yyredis)
+
+PROJECT(${REDIS_LIBNAME})
+ADD_LIBRARY(${REDIS_LIBNAME} SHARED
+yyredis.cpp
+)
+
+SET(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+
+#--------------------
+# Package look for
+#--------------------
+FIND_PACKAGE(LibRedis)
+IF(LibRedis_FOUND)
+	MESSAGE(STATUS "FOUND PACKAGE: ${LIBREDIS_INCLUDE_DIR} AND ${LIBREDIS_LIB}")
+ELSE()
+	MESSAGE(STATUS "! NOT FOUND PACKAGE: ${LIBREDIS_INCLUDE_DIR} OR ${LIBREDIS_LIB}")	
+ENDIF(LibRedis_FOUND)
+
+#--------------------
+# build parameter
+#--------------------
+INCLUDE_DIRECTORIES(
+${LIBREDIS_INCLUDE_DIR}
+../
+../../
+../../include
+../event
+)
+
+TARGET_LINK_LIBRARIES(${REDIS_LIBNAME}
+${LIBREDIS_LIB}
+)
+

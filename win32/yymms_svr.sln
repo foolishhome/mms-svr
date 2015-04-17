@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 10.00
+# Visual Studio 2008
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "yymms_svr", "yymms_svr.vcproj", "{A3FFEADF-E701-406D-A27B-E147255CEE34}"
+	ProjectSection(ProjectDependencies) = postProject
+		{5EBBC623-CC27-4FBB-9559-C17673A308F5} = {5EBBC623-CC27-4FBB-9559-C17673A308F5}
+		{089469BD-0626-475A-9728-F7DDD783CC4D} = {089469BD-0626-475A-9728-F7DDD783CC4D}
+	EndProjectSection
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "svrlib", "svrlib.vcproj", "{5EBBC623-CC27-4FBB-9559-C17673A308F5}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "hiredis", "hiredis\hiredis.vcproj", "{089469BD-0626-475A-9728-F7DDD783CC4D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A3FFEADF-E701-406D-A27B-E147255CEE34}.Debug|Win32.ActiveCfg = Debug|Win32
+		{A3FFEADF-E701-406D-A27B-E147255CEE34}.Debug|Win32.Build.0 = Debug|Win32
+		{A3FFEADF-E701-406D-A27B-E147255CEE34}.Release|Win32.ActiveCfg = Release|Win32
+		{A3FFEADF-E701-406D-A27B-E147255CEE34}.Release|Win32.Build.0 = Release|Win32
+		{5EBBC623-CC27-4FBB-9559-C17673A308F5}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5EBBC623-CC27-4FBB-9559-C17673A308F5}.Debug|Win32.Build.0 = Debug|Win32
+		{5EBBC623-CC27-4FBB-9559-C17673A308F5}.Release|Win32.ActiveCfg = Release|Win32
+		{5EBBC623-CC27-4FBB-9559-C17673A308F5}.Release|Win32.Build.0 = Release|Win32
+		{089469BD-0626-475A-9728-F7DDD783CC4D}.Debug|Win32.ActiveCfg = Debug|Win32
+		{089469BD-0626-475A-9728-F7DDD783CC4D}.Debug|Win32.Build.0 = Debug|Win32
+		{089469BD-0626-475A-9728-F7DDD783CC4D}.Release|Win32.ActiveCfg = Release|Win32
+		{089469BD-0626-475A-9728-F7DDD783CC4D}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

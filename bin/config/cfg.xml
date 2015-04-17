@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<conf>
+  <servers>
+    <mms_service>
+      <port>10000</port>
+      <mangport>10001</mangport>
+      <workthreads>2</workthreads>
+      <name>mms_service</name>
+    </mms_service>
+    <redis>
+      <redis_Ip>127.0.0.1</redis_Ip>
+      <redis_Port>6379</redis_Port>
+      <delayConnectTime></delayConnectTime>
+    </redis>
+    <mysql>
+      <ip>127.0.0.1</ip>
+      <port>0</port>
+      <user>root</user>
+      <pwd>seeyou</pwd>
+      <db>mmsdb</db>
+    </mysql>
+  </servers>
+</conf>

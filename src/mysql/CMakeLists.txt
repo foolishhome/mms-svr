@@ -1,0 +1,35 @@
+CMAKE_MINIMUM_REQUIRED(VERSION 2.8)
+
+SET(MYSQL_LIBNAME yymysql)
+
+PROJECT(${MYSQL_LIBNAME})
+ADD_LIBRARY(${MYSQL_LIBNAME} SHARED
+yylibmysql.cpp
+)
+
+SET(CMAKE_MODULE_PATH ${CMAKE_SOURCE_DIR}/cmake)
+
+#--------------------
+# Package look for
+#--------------------
+FIND_PACKAGE(LibMysql)
+IF(LibMysql_FOUND)
+	MESSAGE(STATUS "FOUND PACKAGE: ${LIBMYSQL_INCLUDE_DIR} AND ${LIBMYSQL_LIB}")
+ELSE()
+	MESSAGE(STATUS "! NOT FOUND PACKAGE: ${LIBMYSQL_INCLUDE_DIR} OR ${LIBMYSQL_LIB}")	
+ENDIF(LibMysql_FOUND)
+
+#--------------------
+# build parameter
+#--------------------
+INCLUDE_DIRECTORIES(
+${LIBMYSQL_INCLUDE_DIR}
+../
+../../
+../../include
+)
+
+TARGET_LINK_LIBRARIES(${MYSQL_LIBNAME}
+${LIBMYSQL_LIB}
+)
+
